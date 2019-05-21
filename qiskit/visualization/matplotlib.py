@@ -1162,6 +1162,8 @@ class SamplePulseDrawer:
             v_max = max(max(np.abs(re)), max(np.abs(im)))
             ax.set_ylim(-1.2 * v_max, 1.2 * v_max)
 
+        plt.close()
+
         return figure
 
 
@@ -1483,5 +1485,7 @@ class ScheduleDrawer:
         ax.set_xlim(t0 * dt, tf * dt)
         ax.set_ylim(y0, 1)
         ax.set_yticklabels([])
+
+        plt.close()
 
         return figure
